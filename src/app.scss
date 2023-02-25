@@ -1,0 +1,332 @@
+$h-text:white;
+$highlight:rgb(61, 216, 61);
+$background:rgb(3, 3, 3); 
+$fade-text:rgb(168, 168, 168);
+$card-background:rgb(29, 29, 29);
+
+$h-font:monospace;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+hr{
+    border-style: none none solid none;
+    border-width: 1px;
+    border-color: $highlight;
+    width: 75%;
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+    // width: min-content;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    background-color: $background;
+}
+.list-element{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 10px;
+    padding: 2.5px;
+
+    &:hover{
+        background-color: $card-background;
+    }
+
+    img{
+        width: 50px;
+        height: 50px;
+
+        border-radius: 5px;
+        margin: 2.5px;
+    }
+
+    .details{
+        display: flex;
+        flex-direction: column;
+
+        h5{
+            color: $h-text;
+            font-size: small;
+            
+        }
+        p{
+            color: $fade-text;
+            font-size:small;
+            
+        }
+    }
+}
+
+nav{
+    background-color: $background;
+    padding:20px;
+   
+   
+
+    h1{
+        
+        color:$h-text;
+        font-size: 2rem;
+        // font-family: $h-font
+    }
+    h3{
+        color: $highlight;
+        font-size: 1.5rem;
+    }
+
+    .search{
+        border:1px solid $highlight;
+        width: 85%;
+        border-radius: 30px;
+        margin: 10px;
+        form{
+    
+            input{
+                    border:none;
+                    outline:none;
+                    background-color: transparent;
+                    font-size: 1.25rem;
+                    color: $h-text;
+                    padding: 5px;
+                    
+            }
+        }
+    }
+}
+
+
+.home-body{
+    background-color: $background;
+    padding: 10px;
+    
+
+.section-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    
+    
+    h2{
+     color:$highlight;  
+     padding: 10px; 
+    }
+
+    
+   
+    .section{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    
+
+            
+           a{
+                width:50%;
+
+
+            .video-card{
+            display:flex;
+            flex-direction: column;
+            background-color:$card-background ;
+            // width: 40%;
+            overflow: hidden;
+            margin: 10px;
+            border-radius: 10px;
+
+            &:hover{
+                box-shadow: #726b6b 0px 0px 10px 2px;
+            }
+            
+            img{
+                width: 100%;
+                
+
+            }
+            
+            .video-details{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                color: $fade-text;
+                padding: 10px;
+                h5{
+                    color: $h-text;
+                    font-size: small;
+                    
+                }
+                
+                .card-footer{
+                    display: flex;
+                
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    p{
+                        font-size:small;
+                        
+                    }
+                }
+                
+                
+            }
+        } 
+
+    }
+
+    
+    }
+}
+
+
+    
+    
+}
+
+
+
+.search{
+    background-color: $background;
+    padding: 10px;
+
+    h2{
+        color: $highlight;
+        padding: 10px;
+    }
+
+    .songs{
+        display: flex;
+        flex-direction: column;
+
+
+        
+    }
+
+    
+}
+
+.player{
+    display: flex;
+    justify-content: center;
+    background-color: $highlight;
+    border-color: $fade-text;
+    width: -webkit-fill-available;
+    padding:10px 10px 0px 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    .row{
+     align-items:center;
+     
+        .vol{
+        width: 25%;
+    }
+    .trackSlider{
+        width: 50%;
+    }
+    }
+    
+    #player{
+        display:none
+    }
+
+    .row{
+
+        img{
+            width:50px;
+            height: 50px;
+            border-radius: 5px;
+            margin: 10px;
+
+        }
+
+        .column{
+
+            input{
+               
+                -webkit-appearance: none;  /* Override default CSS styles */
+                appearance: none;
+                              height: 2.5px; /* Specified height */
+                background: $background; /* Grey background */
+                outline: none; /* Remove outline */
+                opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+                -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+                transition: opacity .2s;
+            }
+
+            input::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%; 
+                background: $background;
+                cursor: pointer;
+              }
+              
+              input::-moz-range-thumb {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background: #04AA6D;
+                cursor: pointer;
+              }
+
+
+            h4{
+                // font-size: small;
+                color: $background;
+                margin: 5px 0px;
+            }
+            p{
+                font-size: small;
+                color: $background;
+                margin: 10px 0px;
+
+            }
+            .row{
+                gap:10px;
+                justify-content: space-between;
+
+                .prev,.play,.next{
+                    font-size: 1.2rem;
+                }
+
+                
+            }
+        }
+    }
+
+}
+
+
+
+.playlistDetails{
+    padding: 10px;
+
+    h2{
+        color:$highlight;
+    }
+    .banner{
+        width:100%;
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+    
+
+}
